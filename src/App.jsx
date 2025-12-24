@@ -1,23 +1,23 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import AddTask from "../src/component/AddTask";
-import ListTask from "../src/component/ListTask";
-import { TaskProvider } from "../src/context/TaskContext";
+import AddStudent from "./component/AddStudent";
+import ListStudent from "./component/ListStudent";
+import { StudentProvider } from "../src/context/StudentContext";
 
 
 const App = () => {
     return (
-        <TaskProvider>
+        <StudentProvider>
             <Router>
                 <div className="container mt-4">
-                    <h1 className="text-center">Task Manager</h1>
+                    <h1 className="text-center">Student Information</h1>
                     <Routes>
-                        <Route path="/" element={<ListTask />} />
-                        <Route path="/add" element={<AddTask />} />
+                        <Route path="/" element={<ListStudent />} />
+                        <Route path="/add" element={<AddStudent />} />
                     </Routes>
                 </div>
             </Router>
-        </TaskProvider>
+        </StudentProvider>
     );
 };
 
