@@ -20,6 +20,10 @@ console.log(state);
                 {student.name}
               </h5>
               <p>{student.addres}</p>
+              <p>{student.rollno}</p>
+              <p>{student.marks}</p>
+
+
             </div>
             <div>
               

@@ -6,6 +6,9 @@ export default function AddStudent() {
   const { dispatch } = useContext(StudentContext);
   const [name, setName] = useState("");
   const [addres, setAddres] = useState("");
+  const [rollno, setRollno] = useState("");
+  const [marks, setMarks] = useState("");
+
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -13,7 +16,7 @@ export default function AddStudent() {
     if (name && addres) {
       dispatch({
         type: "ADD_STUDENT",
-        payload: { id: Date.now(), name,addres , completed: false },
+        payload: { id: Date.now(), name,addres , rollno,marks, completed: false },
       });
       navigate("/");
     }
@@ -36,6 +39,20 @@ export default function AddStudent() {
           placeholder="Addres"
           value={addres}
           onChange={(e) => setAddres(e.target.value)}
+          required
+        />
+         <textarea
+          className="form-control mt-2"
+          placeholder="Rollno"
+          value={rollno}
+          onChange={(e) => setRollno(e.target.value)}
+          required
+        />
+         <textarea
+          className="form-control mt-2"
+          placeholder="Marks"
+          value={marks}
+          onChange={(e) => setMarks(e.target.value)}
           required
         />
         <button type="submit" className="btn btn-primary mt-2">
