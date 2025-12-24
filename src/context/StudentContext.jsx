@@ -16,7 +16,7 @@ const studentReducer = (state, action) => {
       return state.filter((student) => student.id !== action.payload);
     case "TOGGLE_COMPLETE":
       return state.map((student) =>
-        student.id === action.payload ? { ...student, completed: !student.completed } : task
+        student.id === action.payload ? { ...student, completed: !student.completed } : student
       );
     default:
       return state;

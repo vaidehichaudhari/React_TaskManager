@@ -34,7 +34,7 @@ console.log(state);
                     type: "EDIT_STUDENT",
                     payload: {
                       ...student,
-                      title: prompt("Edit Student Information:", student.name) || student.name,
+                      title: prompt("Edit Student Information:", student.name) || student.name
                     },
                   })
                 }
